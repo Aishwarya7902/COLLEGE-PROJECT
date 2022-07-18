@@ -9,6 +9,7 @@ body{
 	font-family: cursive;
 }
 nav{
+	position: relative;
 	background: #55efc4;
 	height: 80px;
 	width: 100%;
@@ -30,15 +31,21 @@ nav ul li{
 	margin: 0 5px;
 }
 nav ul li a{
+
 	color: white;
 	font-size: 17px;
 	padding: 7px 13px;
 	border-radius: 3px;
 	text-transform: uppercase;
+	transition-duration:.4s;
 }
 a.active,a:hover{
-	background: #ff7979;
+	
 	transition: .5s;
+}
+nav a:active{
+ color: white;
+ border-bottom: 3px solid orange;
 }
 .checkbtn{
 	font-size: 30px;
@@ -51,6 +58,7 @@ a.active,a:hover{
 #check{
 	display: none;
 }
+
 @media(max-width: 952px){
 	label.logo{
 		font-size: 30px;
@@ -64,6 +72,7 @@ a.active,a:hover{
 	.checkbtn{
 		display: block;
 	}
+
 	ul{
 		position: fixed;
 		width: 100%;
@@ -91,8 +100,59 @@ a.active,a:hover{
 	}
 }
 
-section{
+/*section{
 	background:url(https://images.unsplash.com/photo-1543946207-39bd91e70ca7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8N3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60) no-repeat;
 	background-size: cover;
 	height: calc(100vh - 80px);
+}*/
+
+.hero_main{
+	position: absolute;
+	width: 100%;
+   background-image: linear-gradient(rgba(0, 0, 0,0.5),rgba(0, 0, 0,0.5)),url(https://images.unsplash.com/photo-1543946207-39bd91e70ca7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8N3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60);
+   background-size: cover;
+   background-position: center;
+   height: 100vh;
+
+}
+.hero-text-box{
+	position: absolute;
+	width: 100vw;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%) ;
+	font-weight: 300;
+	color: /*#555*/white;
+	font-size: 40px;
+
+} 
+
+.btn{
+	text-decoration: none;
+	font-size: 20px;
+	border-radius: 20px;
+	/*background-color: aqua;*/
+	padding: 8px 15px;
+   transition-duration:0.3s;
+}
+.btn-take{
+color: white;
+background-color:#fd6580;	
+border: 1px solid #fd6580 ;
+/*transition-duration:0.3s;*/
+}
+.btn-take:hover{
+	background-color: #fc113b;
+	border: 1px solid #fc113b;
+}
+
+.btn-more{
+color: grey;
+border: 1px solid #fd6580;
+
+}
+
+.btn-more:hover{
+	background-color: #fc113b;
+	color: black;
 }
